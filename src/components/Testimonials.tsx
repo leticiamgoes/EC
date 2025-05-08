@@ -100,7 +100,7 @@ export default function Testimonials() {
             href="#comprar" 
             className="inline-block bg-gold text-white font-bold py-3 px-10 rounded-full transition-all duration-300 hover:brightness-110 shadow-md hover:shadow-lg"
           >
-            Quero Fazer Parte Dessa Comunidade
+            Quero Fazer Parte Dessa Comunidade!
           </a>
         </div>
       </div>
