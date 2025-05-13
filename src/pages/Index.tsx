@@ -6,6 +6,8 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import AuthorsSection from "@/components/AuthorsSection";
+import LeadForm from "@/components/LeadForm";
 
 const Index = () => {
   return (
@@ -14,9 +16,12 @@ const Index = () => {
       <Hero />
       <Benefits />
       <Testimonials />
+      <AuthorsSection />
+      <LeadForm />
       <FAQ />
       <CTA />
       <Footer />
+      
     </div>
   );
 };

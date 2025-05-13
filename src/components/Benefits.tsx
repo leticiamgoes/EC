@@ -1,6 +1,7 @@
-
 import { Check, FileText, Brain, Scale, Users, Briefcase, Award } from 'lucide-react';
 import LeadForm from './LeadForm'; // ajuste o caminho se necessário
+
+// O componente AboutAuthors foi removido e seu conteúdo incorporado abaixo
 
 export default function Benefits() {
   const benefits = [
@@ -36,89 +37,68 @@ export default function Benefits() {
     },
   ];
 
-  return (
-    <section id="beneficios" className="py-20 bg-white">
-      <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            O que você vai <span className="text-gold-DEFAULT">conquistar</span> com este eBook
-          </h2>
-          <p className="text-lg text-gray-600">
-            Não é apenas um livro, é um guia prático que transformará sua atuação na advocacia criminal, 
-            oferecendo ferramentas concretas para resultados reais.
-          </p>
-        </div>
+  // Seção Sobre os Autores incorporada diretamente
+  // const aboutAuthorsSection = (
+  //   <section id="sobre-os-autores" className="py-16 bg-gray-50">
+  //     <div className="container mx-auto px-4">
+  //       <div className="text-center max-w-3xl mx-auto mb-12">
+  //         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+  //           Sobre os Autores
+  //         </h2>
+  //       </div>
+  //       <div className="flex flex-col md:flex-row items-center md:items-start bg-white p-8 rounded-lg shadow-lg">
+  //         <div className="md:w-1/3 mb-6 md:mb-0 md:mr-8 flex-shrink-0">
+  //           <img
+  //             src="public/img/autores.jpeg" // Caminho para a imagem na pasta public
+  //             alt="Arthur Irwin e Luan Guimarães"
+  //             className="rounded-lg shadow-md w-full h-auto object-cover max-h-96 md:max-h-full"
+  //           />
+  //         </div>
+  //         <div className="md:w-2/3 text-gray-700 text-lg">
+  //           <p className="mb-6">
+  //             <strong>Arthur Irwin</strong> é um dedicado Advogado Criminalista e orgulhoso membro da Associação Brasileira de Advocacia Criminal (ABRACRIM). Sua paixão pelo Direito Penal e pela Criminologia o levou a aprofundar seus conhecimentos através de uma Pós-Graduação na Pontifícia Universidade Católica do Rio Grande do Sul (PUC-RS), uma instituição de renome. Além de sua prática jurídica, Arthur contribui ativamente para a academia como autor de capítulos de livros e artigos científicos, compartilhando sua expertise e insights com a comunidade jurídica. Sua vocação para o ensino se manifesta também como professor em cursos preparatórios para o Exame de Ordem, onde auxilia futuros advogados a alcançarem seus objetivos, e como mentor para jovens advogados, guiando-os nos primeiros passos de suas carreiras na advocacia criminal.
+  //           </p>
+  //           <p>
+  //             <strong>Luan Guimarães</strong> destaca-se como um experiente Advogado Criminalista, sendo membro ativo tanto da Associação Brasileira de Advocacia Criminal (ABRACRIM) quanto da Associação Nacional da Advocacia Criminal (ANACRIM). Buscando constante aperfeiçoamento, concluiu sua Pós-Graduação em Direito Penal e Processo Penal pela respeitada Escola Brasileira de Direito. Luan também possui uma veia acadêmica, sendo autor de capítulos de livros e artigos científicos que enriquecem o debate jurídico na área criminal. Seu compromisso com a formação de novos profissionais é evidente em sua atuação como professor em cursos de preparação para o Exame de Ordem, além de dedicar seu tempo como professor para jovens advogados, compartilhando seu conhecimento prático e teórico para o desenvolvimento da nova geração de criminalistas.
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </section>
+  // );
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={index} 
-              className="bg-gray-50 rounded-lg p-6 border border-gray-100 hover:shadow-lg transition-shadow"
-            >
-              <div className="mb-4">{benefit.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
-<LeadForm/>
-        {/* <div className="mt-16 bg-chess-black text-white rounded-xl p-8 md:p-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                O que está incluído no <span className="text-gold-DEFAULT">Pacote Premium</span>
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <Check className="h-6 w-6 text-gold-DEFAULT mr-3 mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="block">eBook Estratégia Criminal</strong>
-                    <span className="text-gray-300">Mais de 200 páginas de conteúdo especializado</span>
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-6 w-6 text-gold-DEFAULT mr-3 mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="block">Biblioteca de Modelos</strong>
-                    <span className="text-gray-300">20+ templates de peças processuais em formato editável</span>
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-6 w-6 text-gold-DEFAULT mr-3 mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="block">Acesso ao Grupo VIP</strong>
-                    <span className="text-gray-300">Comunidade exclusiva de advogados no WhatsApp</span>
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-6 w-6 text-gold-DEFAULT mr-3 mt-0.5 flex-shrink-0" />
-                  <span>
-                    <strong className="block">Atualizações Gratuitas</strong>
-                    <span className="text-gray-300">Receba todas as novas versões sem custo adicional</span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative h-64 md:h-auto">
-              <div className="absolute inset-0 chess-pattern opacity-20 rounded-lg"></div>
-              <div className="relative h-full flex flex-col justify-center items-center text-center p-6">
-                <p className="text-sm text-gold-DEFAULT font-bold mb-2">INVESTIMENTO ÚNICO</p>
-                <div className="flex items-center justify-center mb-2">
-                  <span className="text-gray-400 line-through text-xl mr-3">R$ 297</span>
-                  <span className="text-4xl font-bold">R$ 197</span>
-                </div>
-                <p className="text-sm text-gray-300 mb-6">Garantia incondicional de 7 dias</p>
-                <a 
-                  href="#comprar" 
-                  className="bg-gold-DEFAULT hover:bg-gold-dark text-white font-bold py-3 px-8 rounded-full transition-colors w-full text-center"
-                >
-                  Quero transformar minha advocacia
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> */}
-      </div>
-    </section>
-  );
+  // return (
+  //   <>
+  //     {aboutAuthorsSection} {/* Seção Sobre os Autores inserida aqui */}
+  //     <section id="beneficios" className="py-20 bg-white">
+  //       <div className="container">
+  //         <div className="text-center max-w-3xl mx-auto mb-16">
+  //           <h2 className="text-3xl md:text-4xl font-bold mb-6">
+  //             O que você vai <span className="text-gold-DEFAULT">conquistar</span> com este eBook
+  //           </h2>
+  //           <p className="text-lg text-gray-600">
+  //             Não é apenas um livro, é um guia prático que transformará sua atuação na advocacia criminal, 
+  //             oferecendo ferramentas concretas para resultados reais.
+  //           </p>
+  //         </div>
+
+  //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  //           {benefits.map((benefit, index) => (
+  //             <div 
+  //               key={index} 
+  //               className="bg-gray-50 rounded-lg p-6 border border-gray-100 hover:shadow-lg transition-shadow"
+  //             >
+  //               <div className="mb-4">{benefit.icon}</div>
+  //               <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
+  //               <p className="text-gray-600">{benefit.description}</p>
+  //             </div>
+  //           ))}
+  //         </div>
+  //         <LeadForm/>
+  //         {/* Comentários originais podem ser mantidos ou removidos conforme necessidade */}
+  //       </div>
+  //     </section>
+  //   </>
+  // );
 }
+
