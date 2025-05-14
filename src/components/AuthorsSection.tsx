@@ -7,39 +7,35 @@ export default function AuthorsSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-center font-serif mb-8">
           Quem escreveu este guia?
         </h2>
-        <br></br> <br></br>
+       
 
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
-          <div className="md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-            <img
-              src="public/img/autores.jpeg"
-              alt="Arthur Irwin e Luan Guimarães"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          <div className="md:w-2/3">
-            {/* <p className="text-gray-700 mb-6 text-lg">
-              O conteúdo foi elaborado por Arthur Irwin (a direita) e Luan Guimarães (a esquerda), advogados criminalistas com atuação estratégica e vasta experiência na prática jurídica, especialmente em procedimentos investigatórios. Eles compartilham, de forma objetiva e prática, o que você precisa fazer quando o acesso ao inquérito for negado.
-                Estratégia Criminal é um curso completo e prático para advogados e estudantes que desejam atuar com segurança na advocacia criminal.
-            </p> */}
-            <div className="flex justify-center md:justify-start">
-              <img src="img/logo_estrategia_criminal_horizontal_light.jpeg"  
-              alt="Estratégia Criminal Logo"
-               className="w-auto object-contain ml-6"
-              style={{ height: '23rem' }} />
-            </div>
-            <p className="text-gray-700 mb-6 text-lg">
-              O conteúdo foi elaborado por Arthur Irwin (à direita) e Luan Guimarães (à esquerda), advogados criminalistas com ampla experiência na linha de frente da advocacia penal. Eles sabem exatamente o que fazer quando o acesso ao inquérito é negado — e agora, você também vai saber.
-O curso Estratégia Criminal foi desenvolvido para preparar advogados e estudantes que desejam atuar com confiança desde os primeiros passos do procedimento investigatório.
-Com uma abordagem direta, prática e sem rodeios, você aprenderá como agir diante das negativas da autoridade policial, quais fundamentos utilizar e como garantir o direito de acesso à investigação.
-Se você quer evitar erros que comprometem toda a defesa desde o início, Estratégia Criminal é o caminho certo. Esteja pronto para atuar com técnica, estratégia e autoridade.
-                    
-                
-            </p>
-            
-          </div>
-        </div>
+<div className="flex justify-center items-center min-h-screen px-1">
+  <div className="flex flex-col items-center text-center gap-8 max-w-3xl w-full">
+   
+
+    <div className="w-full">
+      <div className="flex justify-center mb-6">
+        <img 
+          src="img/logo_estrategia_criminal_horizontal_dark.jpeg"  
+          alt="Estratégia Criminal Logo"
+          className="w-auto object-contain"
+          style={{ height: '30rem' }} 
+        />
+      </div>
+      <p className="text-gray-700 text-lg">
+        O conteúdo foi elaborado por Arthur Irwin e Luan Guimarães, advogados criminalistas com ampla experiência na linha de frente da advocacia penal. Eles sabem exatamente o que fazer quando o acesso ao inquérito é negado — e agora, você também vai saber.
+        
+        O curso Estratégia Criminal foi desenvolvido para preparar advogados e estudantes que desejam atuar com confiança desde os primeiros passos do procedimento investigatório.
+      
+        Com uma abordagem direta, prática e sem rodeios, você aprenderá como agir diante das negativas da autoridade policial, quais fundamentos utilizar e como garantir o direito de acesso à investigação.
+      
+        Se você quer evitar erros que comprometem toda a defesa desde o início, Estratégia Criminal é o caminho certo. Esteja pronto para atuar com técnica, estratégia e autoridade.
+      </p>
+    </div>
+  </div>
+</div>
+
+
 
        <div className="grid md:grid-cols-2 gap-12">
   {/* Card - Arthur Irwin */}
