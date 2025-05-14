@@ -11,38 +11,35 @@ export default function LeadForm() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setLoading(true);
+    e.preventDefault();
+    setLoading(true);
 
-  const dadosLead = {
-    nome,
-    email,
-    telefone,
-    carreira,
-    atuarCriminal,
-    receberMateriais,
-  };
+    const dadosLead = {
+      nome,
+      email,
+      telefone,
+      carreira,
+      atuarCriminal,
+      receberMateriais,
+    };
 
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbxzcYnZJbEAh2QS526yPHmNHqjFA470bGu3N1WK63cKAPXvHKt845IMA_LRn0EZEHnORQ/exec", {
-      method: "POST",
-      body: JSON.stringify(dadosLead),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbxzcYnZJbEAh2QS526yPHmNHqjFA470bGu3N1WK63cKAPXvHKt845IMA_LRn0EZEHnORQ/exec", {
+        method: "POST",
+        headers: new Headers({
+          "Content-Type": "application/json",
+        }),
+        mode: "no-cors",
+        body: JSON.stringify(dadosLead),
+      });
 
-    const result = await response.json();
-    if (result.status === "sucesso") {
-      setEnviado(true);
+      setEnviado(true); // Assume sucesso com no-cors
+    } catch (error) {
+      console.error("Erro ao enviar os dados:", error);
+    } finally {
+      setLoading(false);
     }
-  } catch (error) {
-    console.error("Erro ao enviar os dados:", error);
-  } finally {
-    setLoading(false);
-  }
-};
-
+  };
 
   return (
     <div className="mt-20 bg-chess-black rounded-xl border border-gray-700">
