@@ -2,7 +2,7 @@ import { Briefcase, Award, Book } from "lucide-react";
 
 export default function AuthorsSection() {
   return (
-    <section className="py-20 bg-white" id="autores">
+    <section className="py-20 bg-gray-50" id="autores">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center font-serif mb-8">
           Quem escreveu este guia?

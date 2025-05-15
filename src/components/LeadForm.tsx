@@ -42,7 +42,8 @@ export default function LeadForm() {
   };
 
   return (
-    <div className="mt-20 bg-chess-black rounded-xl border border-gray-700">
+    <div className="mt-10 mb-10 bg-black rounded-2xl border border-gray-300 p-8 max-w-xl mx-auto shadow-lg">
+
       <div className="p-6 md:p-8">
         <h3 className="text-2xl font-bold mb-6 text-center text-white">
           GRÁTIS: Receba nosso e-Book exclusivo!

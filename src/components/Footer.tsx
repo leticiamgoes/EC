@@ -29,9 +29,9 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-6">
               <div className="bg-chess-black dark:bg-white rounded-full p-1.5">
                 <img 
-                  src="/lovable-uploads/a742ad90-49ef-42fd-b4b6-64777f9e8af6.png" 
+                  src="/img/logo_estrategia_criminal_circular.jpeg" 
                   alt="Logo Estratégia Criminal" 
-                  className="w-6 h-6"
+                  className="w-10 h-10"
                 />
               </div>
               <span className="font-serif font-bold text-lg">Estratégia Criminal</span>
@@ -42,12 +42,12 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-bold text-lg mb-4">Links Rápidos</h4>
+            <h4 className="font-bold text-lg mb-4"></h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#beneficios" className="hover:text-gold-DEFAULT transition-colors">Benefícios</a></li>
-              <li><a href="#depoimentos" className="hover:text-gold-DEFAULT transition-colors">Depoimentos</a></li>
-              <li><a href="#perguntas" className="hover:text-gold-DEFAULT transition-colors">FAQ</a></li>
-              <li><a href="#comprar" className="hover:text-gold-DEFAULT transition-colors">Adquirir Agora</a></li>
+              <li><a href="#Benefits.tsx" className="hover:text-gold-DEFAULT transition-colors"></a></li>
+              
+              <li><a href="#perguntas" className="hover:text-gold-DEFAULT transition-colors"></a></li>
+              <li><a href="#comprar" className="hover:text-gold-DEFAULT transition-colors"></a></li>
             </ul>
           </div>
           
@@ -58,7 +58,7 @@ export default function Footer() {
               href="mailto:contato@estrategiacriminal.com.br" 
               className="text-gold-DEFAULT hover:underline"
             >
-              contato@estrategiacriminal.com.br
+              estrategiacriminal@gmail.com
             </a>
           </div>
         </div>
