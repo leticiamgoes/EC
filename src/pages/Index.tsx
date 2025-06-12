@@ -13,7 +13,7 @@ import ContentSection from "@/components/ContentSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-chess-black">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       {/* <Benefits /> */}
       {/* <TargetAudienceSection /> */}
