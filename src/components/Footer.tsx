@@ -55,23 +55,14 @@ export default function Footer() {
 
           {/* Coluna 3: Links rápidos */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Links rápidos</h4>
+            <h4 className="font-bold text-lg mb-4">Redes Sociais:</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#beneficios" className="hover:text-gold-DEFAULT transition-colors">
-                  Benefícios
+                <a href="https://www.instagram.com/estrategia_criminal/" className="hover:text-gold-DEFAULT transition-colors">
+                  Instagram
                 </a>
               </li>
-              <li>
-                <a href="#perguntas" className="hover:text-gold-DEFAULT transition-colors">
-                  Perguntas Frequentes
-                </a>
-              </li>
-              <li>
-                <a href="#comprar" className="hover:text-gold-DEFAULT transition-colors">
-                  Comprar Agora
-                </a>
-              </li>
+              
             </ul>
           </div>
 
