@@ -18,7 +18,7 @@ export default function AuthorsSection() {
         <img 
           src="img/logo_estrategia_criminal_horizontal_dark.jpeg"  
           alt="Estratégia Criminal Logo"
-          className="w-auto object-contain"
+          className="w-auto object-contain rounded-lg"
           style={{ height: '30rem' }} 
         />
       </div>

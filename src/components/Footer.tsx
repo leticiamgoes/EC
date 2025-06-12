@@ -1,4 +1,3 @@
-
 import { ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -12,7 +11,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-chess-gray dark:bg-chess-black text-white py-12">
-      <div className="container">
+      <div className="container mx-auto px-4">
+        {/* Botão para voltar ao topo */}
         <div className="flex justify-center mb-8">
           <Button 
             variant="outline" 
@@ -23,46 +23,63 @@ export default function Footer() {
             <ChevronUp className="h-5 w-5" />
           </Button>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+        {/* Grid de 4 colunas */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 items-start mb-12">
+<div className="flex justify-start md:justify-end">
+            <img 
+              src="/img/estrategiasemfundo.png" 
+    alt="Logo Estratégia Criminal" 
+   className="flex justify-start md:justify-end md:mt-[-40px]"
+
+            />
+          </div>
+          {/* Coluna 1: Descrição */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-chess-black dark:bg-white rounded-full p-1.5">
-                <img 
-                  src="/img/logo_estrategia_criminal_circular.jpeg" 
-                  alt="Logo Estratégia Criminal" 
-                  className="w-10 h-10"
-                />
-              </div>
-              <span className="font-serif font-bold text-lg">Estratégia Criminal</span>
-            </div>
-            <p className="text-gray-400 mb-4">
-              O guia definitivo para advogados criminais que desejam se destacar e conquistar resultados extraordinários para seus clientes.
+            <p className="text-gray-400 max-w-md">
+              "O guia para advogados criminais que desejam se destacar e conquistar resultados extraordinários para seus clientes."
             </p>
           </div>
-          
-          <div>
-            <h4 className="font-bold text-lg mb-4"></h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#Benefits.tsx" className="hover:text-gold-DEFAULT transition-colors"></a></li>
-              
-              <li><a href="#perguntas" className="hover:text-gold-DEFAULT transition-colors"></a></li>
-              <li><a href="#comprar" className="hover:text-gold-DEFAULT transition-colors"></a></li>
-            </ul>
-          </div>
-          
+
+          {/* Coluna 2: Contato */}
           <div>
             <h4 className="font-bold text-lg mb-4">Contato</h4>
             <p className="text-gray-400 mb-2">Para dúvidas ou suporte:</p>
             <a 
-              href="mailto:contato@estrategiacriminal.com.br" 
+              href="mailto:estrategiacriminal@gmail.com" 
               className="text-gold-DEFAULT hover:underline"
             >
               estrategiacriminal@gmail.com
             </a>
           </div>
+
+          {/* Coluna 3: Links rápidos */}
+          <div>
+            <h4 className="font-bold text-lg mb-4">Links rápidos</h4>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <a href="#beneficios" className="hover:text-gold-DEFAULT transition-colors">
+                  Benefícios
+                </a>
+              </li>
+              <li>
+                <a href="#perguntas" className="hover:text-gold-DEFAULT transition-colors">
+                  Perguntas Frequentes
+                </a>
+              </li>
+              <li>
+                <a href="#comprar" className="hover:text-gold-DEFAULT transition-colors">
+                  Comprar Agora
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Coluna 4: Logo */}
+          
         </div>
-        
+
+        {/* Rodapé inferior */}
         <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
           <p>© {new Date().getFullYear()} Estratégia Criminal. Todos os direitos reservados.</p>
           <div className="mt-2 flex justify-center gap-4">

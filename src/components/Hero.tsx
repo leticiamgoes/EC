@@ -48,7 +48,7 @@ export default function Hero() {
 
                 {/* Lateral (spine) */}
                   <div className="absolute w-[30px] h-full bg-[#ffffff] -left-[30px] transform origin-right rotate-y-90 flex items-center justify-center border border-gold-DEFAULT">
-                    <span className="text-black font-light text-lg whitespace-nowrap transform -rotate-90"> Estratégia Criminal  </span>
+                    <span className="text-black font-light text-lg whitespace-nowrap transform -rotate-90">   </span>
                   </div>
 
 
