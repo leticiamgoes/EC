@@ -24,7 +24,7 @@ export default function LeadForm() {
     };
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbxvLUtOmerMCYb46IVC6X5wU0hBrYwuPZ93RjAFKv3WZz3DBMymPmQxuWnSX0iZsGyG/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbxWNCiuqLgMwk73aCMx7MetkYslfAouT5vDlPRf-tM4q5Y3WhPznse3-brIoEEevu-EOw/exec", {
         method: "POST",
         headers: new Headers({
           "Content-Type": "application/json",

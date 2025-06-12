@@ -5,26 +5,27 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center">
       {/* Background with overlay */}
-      <div className="absolute inset-0 bg-chess-black z-0 dark:bg-chess-black">
-        <div className="absolute inset-0 chess-pattern opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-chess-black/70 to-chess-black dark:from-chess-black/90 dark:to-chess-black"></div>
-      </div>
+      <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/img/bg-xadrez4.png')" }}>
+  <div className="absolute inset-0 bg-black/60"></div> {/* escurece o fundo para melhor contraste do texto */}
+</div>
+
       
       {/* Content */}
       <div className="container relative z-10 pt-16 md:pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="text-white space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              O acesso Inquérito Policial foi negado?
+             Dê o Primeiro Passo para se Destacar na Advocacia Criminal 
             </h1>
             <p className="text-lg md:text-xl opacity-90">
-              Descubra como garantir o exercício pleno da defesa – mesmo diante da negativa da autoridade policial. Baixe o Guia Prático gratuito e aprenda as estratégias jurídicas que realmente funcionam, com base em jurisprudência e fundamentos legais.
+             O eBook "5 Dicas Essenciais para Advocacia Criminal" foi escrito para quem deseja deslanchar na prática criminal com estratégia, 
+             segurança e visão real do tribunal.
             </p>
             <div className="pt-8 flex items-center gap-4">
               <div className="flex -space-x-2">
                 <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">L</div>
-                <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">J</div>
-                <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">A</div>
+                <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">G</div>
+                <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">K</div>
               </div>
               <p className="text-sm opacity-80">
                 Mais de <span className="font-bold">500+ advogados</span> já transformaram sua prática com nosso eBook
@@ -46,8 +47,8 @@ export default function Hero() {
                 </div>
 
                 {/* Lateral (spine) */}
-                  <div className="absolute w-[30px] h-full bg-[#1f2539] -left-[30px] transform origin-right rotate-y-90 flex items-center justify-center border border-gold-DEFAULT">
-                    <span className="text-white font-light text-lg whitespace-nowrap transform -rotate-90">ESTRATÉGIA CRIMINAL - GUIA PRÁTICO</span>
+                  <div className="absolute w-[30px] h-full bg-[#ffffff] -left-[30px] transform origin-right rotate-y-90 flex items-center justify-center border border-gold-DEFAULT">
+                    <span className="text-black font-light text-lg whitespace-nowrap transform -rotate-90"> Estratégia Criminal  </span>
                   </div>
 
 

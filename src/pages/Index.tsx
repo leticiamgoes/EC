@@ -15,14 +15,14 @@ const Index = () => {
     <div className="min-h-screen bg-white dark:bg-chess-black">
       <Navbar />
       <Hero />
-      <Benefits />
-      <TargetAudienceSection />
-      <ContentSection />
+      {/* <Benefits /> */}
+      {/* <TargetAudienceSection /> */}
+      {/* <ContentSection /> */}
       {/* <Testimonials /> */}
       <AuthorsSection />
       <LeadForm />
-      <FAQ />
-      <CTA />
+      {/* <FAQ /> */}
+      {/* <CTA /> */}
       <Footer />
       
     </div>
