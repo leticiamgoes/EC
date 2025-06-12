@@ -28,7 +28,7 @@ export default function Hero() {
                 <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">K</div>
               </div>
               <p className="text-sm opacity-80">
-                Mais de <span className="font-bold">500+ advogados</span> já transformaram sua prática com nosso eBook
+                Muitos <span className="font-bold"> advogados criminalistas</span> já transformaram sua prática com nosso eBook!
               </p>
             </div>
           </div>
