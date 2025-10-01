@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="text-white space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-             Dê o Primeiro Passo para se Destacar na Advocacia Criminal 
+             Dê o Primeiro Passo para se Destacar na Advocacia Criminal!
             </h1>
             <p className="text-lg md:text-xl opacity-90">
              O eBook "5 Dicas Essenciais para Advocacia Criminal" foi escrito para quem deseja deslanchar na prática criminal com estratégia, 
