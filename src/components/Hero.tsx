@@ -34,30 +34,30 @@ export default function Hero() {
           </div>
           
           {/* 3D eBook Mockup com capa completa */}
-          <div className="relative flex justify-center md:justify-end animate-fade-in">
-            <div className="relative w-80 h-[440px] perspective group">
-              <div className="absolute w-full h-full preserve-3d ebook-transform group-hover:ebook-hover">
-                {/* Capa frontal como imagem */}
-                <div className="absolute w-full h-full backface-hidden overflow-hidden rounded-md shadow-xl border border-gold-DEFAULT transform -rotate-y-0">
-                  <img 
-                    src="/img/ebook.png" 
-                    alt="Capa do eBook Estratégia Criminal" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+         <div className="relative flex justify-center md:justify-end animate-fade-in">
+  <div className="relative w-80 h-[440px] perspective group">
+    <div className="absolute w-full h-full preserve-3d ebook-transform group-hover:ebook-hover">
+      
+      {/* Capa frontal */}
+      <div className="absolute w-full h-full backface-hidden overflow-hidden rounded-md shadow-xl border border-gold-DEFAULT transform -rotate-y-0 bg-black flex items-center justify-center">
+        <img 
+          src="/img/ebook.png" 
+          alt="Capa do eBook Estratégia Criminal" 
+          className="max-w-full max-h-full object-contain" 
+        />
+      </div>
 
-                {/* Lateral (spine) */}
-                  <div className="absolute w-[30px] h-full bg-[#ffffff] -left-[30px] transform origin-right rotate-y-90 flex items-center justify-center border border-gold-DEFAULT">
-                    <span className="text-black font-light text-lg whitespace-nowrap transform -rotate-90">   </span>
-                  </div>
+      {/* Lateral (spine) */}
+      <div className="absolute w-[30px] h-full bg-[#ffffff] -left-[30px] transform origin-right rotate-y-90 flex items-center justify-center border border-gold-DEFAULT">
+        <span className="text-black font-light text-lg whitespace-nowrap transform -rotate-90"></span>
+      </div>
 
+      {/* Sombra */}
+      <div className="absolute w-full h-full bg-black/30 blur-xl -z-10 transform translate-y-6 scale-90"></div>
+    </div>
+  </div>
+</div>
 
-
-                {/* Sombra */}
-                <div className="absolute w-full h-full bg-black/30 blur-xl -z-10 transform translate-y-6 scale-90"></div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
