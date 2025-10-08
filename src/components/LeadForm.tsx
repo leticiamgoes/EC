@@ -1,164 +1,70 @@
-import { useState } from 'react';
-
-export default function LeadForm() {
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-  const [telefone, setTelefone] = useState('');
-  const [carreira, setCarreira] = useState('');
-  const [atuarCriminal, setAtuarCriminal] = useState('');
-  const [receberMateriais, setReceberMateriais] = useState('');
-  const [enviado, setEnviado] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const dadosLead = {
-      nome,
-      email,
-      telefone,
-      carreira,
-      atuarCriminal,
-      receberMateriais,
-    };
-
-    try {
-      await fetch("https://script.google.com/macros/s/AKfycbykYtPu4GfJLzRdVkXozJCvpFAjAgr9Q2qeqJwMmwOJM6iqh1_qNoQXeOpj5ilcKX-4nQ/exec", {
-        method: "POST",
-        headers: new Headers({
-          "Content-Type": "application/json",
-        }),
-        mode: "no-cors",
-        body: JSON.stringify(dadosLead),
-      });
-
-      setEnviado(true); // Assume sucesso com no-cors
-    } catch (error) {
-      console.error("Erro ao enviar os dados:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+export default function EbooksSection() {
   return (
-    <div className="mt-10 mb-10 bg-black rounded-2xl border border-gray-300 p-8 max-w-xl mx-auto shadow-lg">
-
-      <div className="p-6 md:p-8">
-        <h3 className="text-2xl font-bold mb-6 text-center text-white">
-          GRÁTIS: Receba nosso e-Book exclusivo!
-        </h3>
-
-        {enviado ? (
-          <div className="bg-green-900 bg-opacity-20 p-6 rounded-lg text-center border border-green-700">
-            <p className="text-green-400 text-lg font-semibold mb-2">Sucesso!</p>
-            <p className="text-white">Seus dados foram enviados com sucesso.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5 max-w-xl mx-auto">
-            <div>
-              <label className="block text-white text-sm mb-1">Nome completo:</label>
-              <input
-                type="text"
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
-                required
-                className="w-full px-4 py-2 rounded-lg bg-chess-gray text-white border border-gray-600 focus:border-gold-DEFAULT focus:outline-none"
-                placeholder="Seu nome completo"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white text-sm mb-1">Email:</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full px-4 py-2 rounded-lg bg-chess-gray text-white border border-gray-600 focus:border-gold-DEFAULT focus:outline-none"
-                placeholder="Seu email"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white text-sm mb-1">Número de telefone (WhatsApp):</label>
-              <input
-                type="tel"
-                value={telefone}
-                onChange={(e) => setTelefone(e.target.value)}
-                required
-                className="w-full px-4 py-2 rounded-lg bg-chess-gray text-white border border-gray-600 focus:border-gold-DEFAULT focus:outline-none"
-                placeholder="(DDD) 9xxxx-xxxx"
-              />
-            </div>
-
-            <div>
-              <label className="block text-white text-sm mb-1">
-                Qual carreira você deseja seguir dentro do Direito?
-              </label>
-              <select
-                value={carreira}
-                onChange={(e) => setCarreira(e.target.value)}
-                required
-                className="w-full px-4 py-2 rounded-lg bg-chess-gray text-white border border-gray-600 focus:border-gold-DEFAULT focus:outline-none"
-              >
-                <option value="">Selecione...</option>
-                <option value="advocacia">Advocacia</option>
-                <option value="concurso">Concurso</option>
-                <option value="duvida">Ainda em dúvida</option>
-              </select>
-            </div>
-
-            {carreira === 'advocacia' && (
-              <div>
-                <label className="block text-white text-sm mb-1">
-                  Você deseja atuar no Direito Criminal?
-                </label>
-                <select
-                  value={atuarCriminal}
-                  onChange={(e) => setAtuarCriminal(e.target.value)}
-                  required
-                  className="w-full px-4 py-2 rounded-lg bg-chess-gray text-white border border-gray-600 focus:border-gold-DEFAULT focus:outline-none"
-                >
-                  <option value="">Selecione...</option>
-                  <option value="sim">Sim</option>
-                  <option value="nao">Não</option>
-                </select>
-              </div>
-            )}
-
-            <div>
-              <label className="block text-white text-sm mb-1">
-                Deseja se inscrever para receber mais materiais gratuitos como esse no futuro?
-              </label>
-              <select
-                value={receberMateriais}
-                onChange={(e) => setReceberMateriais(e.target.value)}
-                required
-                className="w-full px-4 py-2 rounded-lg bg-chess-gray text-white border border-gray-600 focus:border-gold-DEFAULT focus:outline-none"
-              >
-                <option value="">Selecione...</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
-            </div>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-gold text-white font-bold py-3 px-6 rounded-lg hover:bg-gold-light transition-colors"
-            >
-              {loading ? "Enviando..." : "QUERO O eBOOK AGORA!"}
-            </button>
-
-            <div className="text-center">
-              <p className="text-xs text-gray-400">
-                Prometemos não enviar spam. Seus dados estão seguros conosco.
-              </p>
-            </div>
-          </form>
-        )}
+    <section className="bg-black py-20 px-6 md:px-12 lg:px-24 text-white relative overflow-hidden" id="ebooks-section">
+      
+      {/* --- Introdução Premium do eBook --- */}
+      <div className="max-w-4xl mx-auto text-center mb-16 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-[#111]/60 to-black/80 -z-10 rounded-3xl shadow-2xl"></div>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gold mb-4">
+          Guia dos Tribunais Superiores
+        </h2>
+        <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-6">
+          Um material exclusivo, direto ao ponto e criado para advogados e estudantes de Direito que querem dominar os principais Tribunais Superiores.  
+          Estratégias práticas, dicas essenciais e informações que fazem a diferença na prática penal.
+        </p>
       </div>
-    </div>
+
+      {/* --- eBook Pago (Hotmart) --- */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* Imagem do eBook */}
+        <div className="relative w-full h-72 md:h-96 overflow-hidden rounded-2xl shadow-2xl">
+          <img
+            src="/img/ebookpago.png"
+            alt="Guia dos Tribunais Superiores"
+            className="object-cover w-full h-full"
+          />
+          {/* Badge de preço flutuante */}
+          <div className="absolute top-4 right-4 bg-gold text-black font-bold px-4 py-2 rounded-lg shadow-xl animate-[pulse_2s_ease-in-out_infinite]">
+            R$ 37,90
+          </div>
+        </div>
+
+        {/* Texto e CTA */}
+        <div className="space-y-6">
+          <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+          <p>
+  O eBook <strong>“Guia Definitivo da Advocacia Criminal Atualizada”</strong> foi escrito para quem deseja dominar a prática criminal com <strong>estratégia, segurança</strong> e base em decisões recentes do STJ, abordando:
+</p>
+<br></br>
+<ul className="list-disc list-inside mb-4">
+  <li>Tráfico de drogas, buscas e tráfico privilegiado.</li>
+  <li>Delitos patrimoniais, provas periciais e reconhecimento pessoal.</li>
+  <li>Homicídio, pronúncia e elementos de inquérito.</li>
+  <li>Dosimetria de pena, agravantes, atenuantes e compensações.</li>
+  <li>Execução penal, remição de pena e direitos do preso.</li>
+  <li>Recursos criminais, embargos de declaração e apelação.</li>
+</ul>
+
+<p>
+  Um material completo, direto ao ponto, que oferece <strong>segurança e visão prática</strong> para se destacar nos tribunais.
+</p>
+
+          </p>
+
+          <a
+            href="LINK_DA_HOTMART_AQUI"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-gold text-black font-bold py-4 px-10 rounded-lg 
+                       hover:bg-gold/90 transition-all relative animate-[pulse_1.8s_ease-in-out_infinite]"
+            style={{
+              boxShadow: "0 0 25px rgba(198, 167, 112, 0.6)",
+            }}
+          >
+            ADQUIRIR AGORA POR APENAS R$ 37,90
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }

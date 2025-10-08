@@ -6,21 +6,35 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: "url('/img/bg-xadrez4.png')" }}>
-  <div className="absolute inset-0 bg-black/60"></div> {/* escurece o fundo para melhor contraste do texto */}
-</div>
+        <div className="absolute inset-0 bg-black/60"></div> {/* escurece o fundo para melhor contraste do texto */}
+      </div>
 
-      
       {/* Content */}
       <div className="container relative z-10 pt-16 md:pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+
+          {/* Texto Hero */}
           <div className="text-white space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-             Dê o Primeiro Passo para se Destacar na Advocacia Criminal!
+              Adquira AGORA!
             </h1>
             <p className="text-lg md:text-xl opacity-90">
-             O eBook "5 Dicas Essenciais para Advocacia Criminal" foi escrito para quem deseja deslanchar na prática criminal com estratégia, 
-             segurança e visão real do tribunal.
+              O eBook <strong>“Guia dos Tribunais Superiores”</strong> foi desenvolvido para quem deseja dominar a prática criminal com estratégia, segurança e decisões atualizadas do STJ, oferecendo um guia completo e direto ao ponto para se destacar nos tribunais.
             </p>
+
+            {/* Botão Adquirir Agora */}
+            {/* Botão Adquirir Agora */}
+<div className="pt-6">
+  <button
+    onClick={() => document.getElementById('ebooks-section')?.scrollIntoView({ behavior: 'smooth' })}
+    className="inline-flex items-center bg-gold text-black font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gold/90 transition-all animate-pulse hover:scale-105"
+  >
+    Adquirir agora por apenas R$ 37,90
+    <ArrowRight className="ml-2 w-5 h-5" />
+  </button>
+</div>
+
+
             <div className="pt-8 flex items-center gap-4">
               <div className="flex -space-x-2">
                 <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">L</div>
@@ -28,35 +42,39 @@ export default function Hero() {
                 <div className="w-10 h-10 rounded-full bg-gold-light flex items-center justify-center border-2 border-gold-DEFAULT text-gold-dark font-bold">K</div>
               </div>
               <p className="text-sm opacity-80">
-                Muitos <span className="font-bold"> advogados criminalistas</span> já transformaram sua prática com nosso eBook!
+                Muitos <span className="font-bold">advogados criminalistas</span> já transformaram sua prática com nosso eBook!
               </p>
             </div>
           </div>
-          
-          {/* 3D eBook Mockup com capa completa */}
-         <div className="relative flex justify-center md:justify-end animate-fade-in">
-  <div className="relative w-80 h-[440px] perspective group">
-    <div className="absolute w-full h-full preserve-3d ebook-transform group-hover:ebook-hover">
-      
-      {/* Capa frontal */}
-      <div className="absolute w-full h-full backface-hidden overflow-hidden rounded-md shadow-xl border border-gold-DEFAULT transform -rotate-y-0 bg-black flex items-center justify-center">
-        <img 
-          src="/img/ebook.png" 
-          alt="Capa do eBook Estratégia Criminal" 
-          className="max-w-full max-h-full object-contain" 
-        />
-      </div>
 
-      {/* Lateral (spine) */}
-      <div className="absolute w-[30px] h-full bg-[#ffffff] -left-[30px] transform origin-right rotate-y-90 flex items-center justify-center border border-gold-DEFAULT">
-        <span className="text-black font-light text-lg whitespace-nowrap transform -rotate-90"></span>
-      </div>
+          {/* 3D eBook Mockup */}
+          <div className="relative flex justify-center md:justify-end animate-fade-in">
+            <div className="relative w-80 h-[440px] perspective group">
+              <div className="absolute w-full h-full preserve-3d ebook-transform group-hover:ebook-hover">
 
-      {/* Sombra */}
-      <div className="absolute w-full h-full bg-black/30 blur-xl -z-10 transform translate-y-6 scale-90"></div>
-    </div>
-  </div>
-</div>
+                {/* Capa frontal clicável */}
+                <div 
+                  onClick={() => document.getElementById('ebooks-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="absolute w-full h-full backface-hidden overflow-hidden rounded-md shadow-xl border border-gold-DEFAULT bg-black flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+                >
+                  <img 
+                    src="/img/ebookpago.png" 
+                    alt="Capa do eBook Estratégia Criminal" 
+                    className="max-w-full max-h-full object-contain" 
+                  />
+                </div>
+
+                {/* Lateral (spine) */}
+                <div className="absolute w-[30px] h-full bg-[#ffffff] -left-[30px] transform origin-right rotate-y-90 flex items-center justify-center border border-gold-DEFAULT">
+                  <span className="text-black font-light text-lg whitespace-nowrap transform -rotate-90"></span>
+                </div>
+
+                {/* Sombra */}
+                <div className="absolute w-full h-full bg-black/30 blur-xl -z-10 transform translate-y-6 scale-90"></div>
+
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
