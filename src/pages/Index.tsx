@@ -19,8 +19,10 @@ const Index = () => {
       {/* <TargetAudienceSection /> */}
       {/* <ContentSection /> */}
       {/* <Testimonials /> */}
-      <AuthorsSection />
       <LeadForm />
+     
+      <AuthorsSection />
+      
       {/* <FAQ /> */}
       {/* <CTA /> */}
       <Footer />
