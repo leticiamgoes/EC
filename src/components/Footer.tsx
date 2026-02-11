@@ -46,10 +46,10 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4">Contato</h4>
             <p className="text-gray-400 mb-2">Para dúvidas ou suporte:</p>
             <a 
-              href="mailto:estrategiacriminal@gmail.com" 
+              href="mailto:criminalestrategia@gmail.com" 
               className="text-gold-DEFAULT hover:underline"
             >
-              estrategiacriminal@gmail.com
+              criminalestrategia@gmail.com
             </a>
           </div>
 
