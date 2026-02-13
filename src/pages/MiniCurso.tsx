@@ -26,7 +26,7 @@ export default function Minicurso() {
     {
       name: "Fernanda L.",
       city: "Belo Horizonte, MG",
-      message: "Finalmente entendi dosimetria na prática. Vale muito!"
+      message: "Finalmente entendi dosimetria na prática. Vale muito, sério mesmo!"
     },
     {
       name: "Carlos A.",
