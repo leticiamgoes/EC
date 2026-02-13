@@ -16,7 +16,7 @@ export default function Minicurso() {
     {
       name: "Juliana M.",
       city: "São Paulo, SP",
-      message: "O minicurso mudou minha forma de argumentar tráfico privilegiado!"
+      message: "O minicurso mudou minha forma de argumentar tráfico privilegiado!!!"
     },
     {
       name: "Roberto S.",
