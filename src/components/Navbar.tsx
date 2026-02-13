@@ -41,7 +41,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center gap-2">
           <div className="bg-chess-black dark:bg-white rounded-full p-1.5">
             <img 
-              src="/lovable-uploads/a742ad90-49ef-42fd-b4b6-64777f9e8af6.png" 
+              src="/logo/a742ad90-49ef-42fd-b4b6-64777f9e8af6.png" 
               alt="Logo Estratégia Criminal" 
               className="w-7 h-7"
             />
