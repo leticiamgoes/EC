@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import AuthorsSection from '@/components/AuthorsSection';
 import LeadForm from '@/components/LeadForm';
 
-export default function MiniCurso() {
+export default function Minicurso() {
   const [notifications, setNotifications] = useState([]);
   const [nextId, setNextId] = useState(0);
 
